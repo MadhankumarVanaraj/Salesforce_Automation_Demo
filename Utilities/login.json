@@ -1,0 +1,14 @@
+[
+    {
+        "testCaseID": "TC001",
+        "description": "Valid Login",
+        "username": "madhansrs681@agentforce.com",
+        "password": "Mahanyaash#5"
+    },
+    {
+        "testCaseID": "TC002",
+        "description": "Invalid Login",
+        "username": "madhakumar.vanaraj@bostonharborconsulting.com.payroll",
+        "password": "Vodfone^123"
+    }
+]

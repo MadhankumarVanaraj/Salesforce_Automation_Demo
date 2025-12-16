@@ -1,0 +1,37 @@
+[
+  {
+    "baseUrl": "https://orgfarm-f2e792f5b2-dev-ed.develop.my.salesforce.com"
+  },
+  {
+    "PostLogin": "https://orgfarm-f2e792f5b2-dev-ed.develop.lightning.force.com/lightning/page/home"
+  },
+  {
+    "CreateNewPage1": {
+      "Name": "SeleniumAlpha",
+      "APIName": "SeleniumAlphaAPI"
+    }
+  },
+  {
+    "CreateNewPage2": {
+      "Name": "SeleniumBeta",
+      "APIName": "SeleniumBetaAPI"
+    }
+  },
+  {
+    "SelectObject": {
+      "ObjectName": "ITAsset"
+    }
+  },
+  {
+    "MenuCreation": {
+      "MenuName": "Cypress",
+      "MenuAPIName": "CypressAPI"
+    }
+  },
+  {
+    "AppCreation": {
+      "AppName": "Cypress Automation",
+      "AppAPIName": "Cypress Automation_API"
+    }
+  }
+]

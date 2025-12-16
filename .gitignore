@@ -1,0 +1,22 @@
+# Node/Playwright
+node_modules/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json
+Data/login_SF.json
+
+# Playwright outputs
+test-results/
+artifacts/
+playwright-report/
+playwright-traces/
+playwright-videos/
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
