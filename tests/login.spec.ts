@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../Pages/login.page';
-import Credentials from '../Utilities/login.json';
 import testData1 from '../Utilities/config.json'
 test.use({ storageState: 'Data/login_SF.json' });
 
@@ -31,12 +30,12 @@ test(`Login into Salesforce app by reading data from JSON ${data.testCaseID},${d
 }
 });*/
 
-test(`Login Salesforce using Storage session`,async({page})=>{
+test(`Login Salesforce using Storage session`, async ({ page }) => {
   const loginPage = new LoginPage(page);
   await page.goto(testData1[1].PostLogin as string);
   await page.waitForTimeout(5000);
   // await page.waitForLoadState('networkidle');
-  //tests .gitignore
+  //Created new repository
 })
 
 
