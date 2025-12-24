@@ -2,6 +2,7 @@ import { Page, expect } from '@playwright/test';
 import { LoginLocators } from '../Locators/login.locators';
 
 export class LoginPage {
+  
   constructor(private page: Page) { }
 
   async login(username: string, password: string) {
