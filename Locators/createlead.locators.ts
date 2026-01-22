@@ -11,6 +11,7 @@ export const createLeadLocators = {
     fillLastName:"div input[placeholder='Last Name']",
     fillCompanyName:"div input[name='Company']",
     clickSaveButton:"div button[name='SaveEdit']",
+    validateToastMessage:".forceToastMessage",
     clickConvertLeadDropdownIcon:"(//lightning-button-menu//button[contains(@class, 'slds-button_icon-border-filled')])[1]",
     clickConvertlink:"//span[text()='Convert']",
     clickCreateNewOpportunity:"(//div[@class='createPanelCollapsed'])[2]",
