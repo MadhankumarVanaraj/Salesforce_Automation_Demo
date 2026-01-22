@@ -1,6 +1,24 @@
 export const createLeadLocators = {
-
     clickAppLauncher: "(//div[@class='slds-icon-waffle'])[1]",
-
-
+    clickViewAll:"//button[text()='View All']",
+    clickSearchAppBox:"div input[placeholder='Search apps or items...']",
+    clickMarketingLink:"//div[@class='slds-app-launcher__tile-body slds-truncate']",
+    navigateToLeadsTab:"//span[text()='Leads']",
+    clickNewButton:"//button[text()='New']",
+    clickSalutationDropdown:"div button[aria-label='Salutation']",
+    selectSalutationMr:"//span[text()='Mr.']",
+    fillFirstName:"div input[placeholder='First Name']",
+    fillLastName:"div input[placeholder='Last Name']",
+    fillCompanyName:"div input[name='Company']",
+    clickSaveButton:"div button[name='SaveEdit']",
+    clickConvertLeadDropdownIcon:"(//lightning-button-menu//button[contains(@class, 'slds-button_icon-border-filled')])[1]",
+    clickConvertlink:"//span[text()='Convert']",
+    clickCreateNewOpportunity:"(//div[@class='createPanelCollapsed'])[2]",
+    EnterNewOpportunityName:"(//input[@type='text' and contains(@class, 'input') and @aria-required='true' and contains(@aria-labelledby, 'label')])[3]",
+    clickConvertButton:"//button[text()='Convert']",
+    clickGoToLead:"//button[text()='Go to Leads']",
+    clickSearchLeadsBox:"div button[aria-label='Search']",
+    EntersearchTextInLeadsBox:"div input[placeholder='Search...']",
+    navigateToOpportunities:"//span[text()='Opportunities']",
+    clickOpportunitySearchBox:"div input[placeholder='Search this list...']"
 };
