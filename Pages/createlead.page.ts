@@ -12,7 +12,9 @@ export class CreateLeadPage {
     await expect(this.page).toHaveURL(LoginLocators.postLoginPageUrl);
     await expect(this.page).toHaveTitle(LoginLocators.postLoginTitle);
     await this.page.click(createLeadLocators.clickAppLauncher);
+    await this.page.waitForTimeout(3000);
     await this.page.click(createLeadLocators.clickViewAll);
+    await this.page.waitForTimeout(3000);
     await this.page.fill(createLeadLocators.clickSearchAppBox, 'Mark');
     await this.page.click(createLeadLocators.clickMarketingLink);
     await this.page.click(createLeadLocators.navigateToLeadsTab);
@@ -40,6 +42,7 @@ export class CreateLeadPage {
     await this.page.fill(createLeadLocators.EnterNewOpportunityName,"BHC_Test Opportunity");
     await this.page.click(createLeadLocators.clickConvertButton);
     await this.page.click(createLeadLocators.clickGoToLead);
+    await this.page.waitForTimeout(3000);
     await this.page.click(createLeadLocators.clickSearchLeadsBox);
     await this.page.fill(createLeadLocators.EntersearchTextInLeadsBox,"Madhan Kumar");
     await this.page.click(createLeadLocators.navigateToOpportunities);
