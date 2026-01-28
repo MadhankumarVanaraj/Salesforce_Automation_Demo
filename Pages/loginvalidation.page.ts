@@ -12,12 +12,6 @@ export class LoginValidationPage {
     await expect(this.page.locator(LoginValidationLocators.loginButton)).toBeVisible();
   }
 
-  /* async loginValidation(username: string, password: string) {
-      await this.page.fill(LoginValidationLocators.usernameField, username);
-      await this.page.fill(LoginValidationLocators.passwordField, password);
-      await this.page.click(LoginValidationLocators.loginButton);
-    } */
-
   async enterUsername(username: string) {
     await this.page.fill(LoginValidationLocators.usernameField, username);
     await expect(this.page.locator(LoginValidationLocators.usernameField)).toHaveValue(username);
@@ -40,12 +34,6 @@ export class LoginValidationPage {
   await this.page.click(LoginValidationLocators.loginButton);
   }
 
-  /*  async verifySuccessfulLogin() {
-    // await expect(this.page).toHaveURL(LoginValidationLocators.postLoginURL);
-    await expect(this.page.locator(LoginValidationLocators.homeTab)).toBeVisible();
-  } */ 
-
-
   async verifyLoginOutcome(expectedSuccess: boolean) {
   if (expectedSuccess) {
     // ✅ Success case: check URL and home tab
@@ -58,5 +46,12 @@ export class LoginValidationPage {
       .toHaveText(LoginValidationLocators.expectedErrorMessage);
   }
 }
+
+async verifyErrorMessage(expectedMessage: string) {
+  const errorLocator = this.page.locator(LoginValidationLocators.errorMessage);
+  await expect(errorLocator).toBeVisible();
+  await expect(errorLocator).toHaveText(expectedMessage);
+}
+
 
 }

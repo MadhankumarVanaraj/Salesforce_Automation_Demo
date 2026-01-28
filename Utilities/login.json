@@ -9,7 +9,7 @@
     {
         "testCaseID": "TC002",
         "description": "Login with unregistered email",
-        "username": "madhakumar.vanaraj@bostonharborconsulting.com.payroll",
+        "username": "unknown@example.com",
         "password": "Vodfone^123",
         "isValid": false
     }

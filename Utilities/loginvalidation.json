@@ -1,0 +1,10 @@
+[{
+        "testCaseID": "TC003",
+        "description": "Login with invalid password",
+        "username": "madhansrs681@agentforce.com",
+        "password": "WrongPassword!",
+        "isValid": false
+}
+
+]
+    
