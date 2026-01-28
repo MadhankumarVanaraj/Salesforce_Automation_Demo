@@ -1,14 +1,16 @@
 [
     {
         "testCaseID": "TC001",
-        "description": "Valid Login",
+        "description": "Login with Valid Credential",
         "username": "madhansrs681@agentforce.com",
-        "password": "Mahanyaash#5"
+        "password": "Mahanyaash#5",
+        "isValid": true
     },
     {
         "testCaseID": "TC002",
-        "description": "Invalid Login",
+        "description": "Login with unregistered email",
         "username": "madhakumar.vanaraj@bostonharborconsulting.com.payroll",
-        "password": "Vodfone^123"
+        "password": "Vodfone^123",
+        "isValid": false
     }
 ]
