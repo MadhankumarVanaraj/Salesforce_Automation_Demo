@@ -7,7 +7,6 @@ import data from '../Utilities/login.json'
 test('Save Salesforce Login', async ({ page }) => {
 
     const loginPage = new LoginPage(page);
-
     await page.goto(testData1[0].baseUrl as string);
     await loginPage.login(data[0].username, data[0].password);
     await page.waitForLoadState('networkidle');

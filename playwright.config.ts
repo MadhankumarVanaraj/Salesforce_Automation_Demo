@@ -20,6 +20,9 @@ export default defineConfig({
      timeout:5000,
   },
 
+  // store all test artifacts in a single folder
+  outputDir: 'test-results/',
+
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -29,17 +32,26 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+/*   reporter: 'html', */
+
+  reporter: [
+    ['list'],
+    ['html', { open: 'never' }],               // Playwright HTML report
+    ['allure-playwright', { outputFolder: 'allure-results' }] // Allure results
+  ],
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace:'on',
-    screenshot: 'on',
-    video:'on',
-    headless: false,
+    baseURL: process.env.BASE_URL ?? 'https://orgfarm-f2e792f5b2-dev-ed.develop.my.salesforce.com',
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    // headless: false,
+    headless: !!process.env.CI
     // storageState:`Data/login_SF.json`
   },
 

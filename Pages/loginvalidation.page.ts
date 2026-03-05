@@ -38,10 +38,11 @@ export class LoginValidationPage {
   if (expectedSuccess) {
     // ✅ Success case: check URL and home tab
     // await expect(this.page).toHaveURL(LoginValidationLocators.postLoginURL);
-    await expect(this.page.locator(LoginValidationLocators.homeTab)).toBeVisible();
+    await this.page.waitForLoadState('networkidle', { timeout: 30000 });
+    await expect(this.page.locator(LoginValidationLocators.homeTab)).toBeVisible({timeout: 30000});
   } else {
     // ❌ Failure case: check error message
-    await expect(this.page.locator(LoginValidationLocators.errorMessage)).toBeVisible();
+    await expect(this.page.locator(LoginValidationLocators.errorMessage)).toBeVisible({timeout: 10000});
     await expect(this.page.locator(LoginValidationLocators.errorMessage))
       .toHaveText(LoginValidationLocators.expectedErrorMessage);
   }

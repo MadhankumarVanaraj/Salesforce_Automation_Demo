@@ -8,12 +8,19 @@ pnpm-lock.yaml
 package-lock.json
 Data/login_SF.json
 
+# Storage State.
+Data/
+
 # Playwright outputs
 test-results/
 artifacts/
 playwright-report/
 playwright-traces/
 playwright-videos/
+
+# Allure outputs
+allure-report/
+allure-results/
 
 # Editor/OS
 .vscode/
