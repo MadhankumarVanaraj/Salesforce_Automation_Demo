@@ -64,6 +64,7 @@ test.only(`Hussain - Playwright - Dropdown Practice`, async ({page})=>{
     const scrollableOption = page.locator(`//div/button[text()='Option 12']`);
     await scrollableOption.waitFor({ state: 'visible' });
     await scrollableOption.click();
-
     await page.waitForTimeout(5000);
 })
+
+//asdf
