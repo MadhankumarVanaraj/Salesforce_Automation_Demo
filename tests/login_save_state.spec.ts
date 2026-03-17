@@ -3,7 +3,6 @@ import { LoginPage } from '../Pages/login.page';
 import testData1 from '../Utilities/config.json'
 import data from '../Utilities/login.json'
 
-
 test('Save Salesforce Login', async ({ page }) => {
 
     const loginPage = new LoginPage(page);
