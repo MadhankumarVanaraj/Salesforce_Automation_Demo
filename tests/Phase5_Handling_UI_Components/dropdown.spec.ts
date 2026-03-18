@@ -67,4 +67,3 @@ test.only(`Hussain - Playwright - Dropdown Practice`, async ({page})=>{
     await page.waitForTimeout(5000);
 })
 
-//asdf
